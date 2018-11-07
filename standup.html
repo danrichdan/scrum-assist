@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Scrum Assist | Dashboard</title>
+</head>
+<body>
+<!--HEADER BEGIN-->
+<header>
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="dashboard.html" class="brand-logo">Scrum Assist</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="discussions-needed.html">Discussions Needed</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Reports<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="standup.html">Standup</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <ul id="slide-out" class="side-nav">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="discussions-needed.html">Discussions Needed</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Reports<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="standup.html">Standup</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </div>
+        <!--MENU DROP DOWN ITEMS-->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="user-story.html">User Story Acceptance Criteria Report</a></li>
+            <li class="divider"></li>
+            <li><a href="process-control.html">Process Control Report</a></li>
+        </ul>
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="user-story.html">User Story Acceptance Criteria Report</a></li>
+            <li class="divider"></li>
+            <li><a href="process-control.html">Process Control Report</a></li>
+        </ul>
+    </nav>
+
+</header>
+<!--HEADER END-->
+
+<!--Begin Main Content-->
+<main id="daily-standup">
+    <section>
+        <div class="container">
+            <h3>Standup</h3>
+        </div>
+    </section>
+    <section id="standup-main-content">
+        <div class="container">
+
+            <!--Tabs Row-->
+            <div class="row">
+                <ul id="tabs-swipe-demo" class="tabs">
+                    <li class="tab col s3"><a class="active" href="#have-done">Have Done</a></li>
+                    <li class="tab col s3"><a href="#working-on">Working On</a></li>
+                    <li class="tab col s3"><a href="#blockers">Blockers</a></li>
+                </ul>
+            </div>
+            <div class="row">
+
+                <!--Have Done Section-->
+                <section id="have-done" class="col s12">
+                    <h4>Have Done</h4>
+                    <ul class="collapsible">
+                    </ul>
+                    <a class="show-have-done waves-effect waves-light btn">Add</a>
+                    <a class="delete-have-dones waves-effect waves-light btn red">Delete All</a>
+
+                    <!--Begin Add Have Done Form-->
+                    <div id="have-done-form" class="row form-section hide">
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Add Have Dones</span>
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input placeholder="Title" id="title" type="text" class="validate">
+                                                    <!-- <label for="title">Title</label> -->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <textarea class="materialize-textarea" name="description" id="description" cols="20" rows="30"></textarea>
+                                                    <label for="description">Description</label>
+                                                </div>
+                                            </div>
+                                            <a type="submit"
+                                               class="close-margin add-have-done waves-effect waves-light btn">Add Have Done</a>
+                                            <a class="hide-have-done waves-effect waves-light btn yellow black-text">
+                                                Close</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Add Have Done Form-->
+                </section>
+                <!--End Add Have Done Section-->
+
+                <!--Begin Working On Section-->
+                <section id="working-on" class="col s12">
+                    <h4>Working On</h4>
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Admin Lookup</div>
+                            <div class="collapsible-body"><span>I will test these as they become testable</span></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">place</i>CORE Tickets</div>
+                            <div class="collapsible-body"><span>Will test as needed</span></div>
+                        </li>
+                    </ul>
+                    <a class="show-working-on waves-effect waves-light btn">Add</a>
+                    <a class="delete-working-on waves-effect waves-light btn red">Delete All</a>
+
+                    <!--Begin Working On Form-->
+                    <div id="working-on-form" class="row form-section hide">
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Add Working Ons</span>
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input placeholder="Title" id="working-on-title" type="text"
+                                                           class="validate">
+                                                    <!-- <label for="title">Title</label> -->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <textarea class="materialize-textarea" name="working-on-description" id="working-on-description" cols="20" rows="30"></textarea>
+                                                    <label for="description">Description</label>
+                                                </div>
+                                            </div>
+                                            <a type="submit"
+                                               class="close-margin add-working-on waves-effect waves-light btn">Add Working
+                                                On</a>
+                                            <a class="hide-working-on waves-effect waves-light btn yellow black-text">
+                                                Close</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Working On Form-->
+                </section>
+                <!--End Working On Section-->
+
+                <!--Begin Blockers Section-->
+                <section id="blockers" class="col s12">
+                    <h4>Blockers</h4>
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Stage is broken</div>
+                            <div class="collapsible-body"><span>Unable to test until Stage is working Correctly</span></div>
+                        </li>
+                    </ul>
+                    <a class="show-blocker waves-effect waves-light btn">Add</a>
+                    <a class="delete-blocker waves-effect waves-light btn red">Delete All</a>
+
+                    <!--Begin Blockers Form-->
+                    <div id="blocker-form" class="row form-section hide">
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Add Blockers</span>
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input placeholder="Title" id="blocker-title" type="text"
+                                                           class="validate">
+                                                    <!-- <label for="title">Title</label> -->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <textarea class="materialize-textarea" name="blocker-description" id="blocker-description" cols="20" rows="30"></textarea>
+                                                    <label for="blocker-description">Description</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a type="submit"
+                                                       class="close-margin add-blocker waves-effect waves-light btn">Add Blocker</a>
+                                                </div>
+                                                <div class="col">
+                                                    <a class="hide-blocker waves-effect waves-light btn yellow black-text">
+                                                        Close</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Blockers Form-->
+
+                </section>
+                <!--End Blockers Section-->
+
+            </div>
+        </div>
+    </section>
+</main>
+<!--End Main Content-->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script src="js/jquery.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>-->
+<script src="js/materialize.min.js"></script>
+<!--<script src="js/main.js"></script>-->
+<script src="js/standup.js"></script>
+</body>
+</html>
