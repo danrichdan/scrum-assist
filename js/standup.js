@@ -25,20 +25,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-//Auth
-// const auth = firebase.auth();
-// auth.signInWithEmailAndPassword(email, pass);
-// auth.createUserWithEmailAndPassword(email, pass);
-//to redirect use window.location.replace(url to redirect too);
-// or possibly with JQuery :
-//$(location).attr('href', 'http://stackoverflow.com')
-/*
- * var url='www.your_url.com';
- $(location).attr('href',url);
- $(location).prop('href',url);//instead of location you can use window
- * */
-
-
 var haveDoneRef = firebase.database().ref('haveDones');
 var workingOnRef = firebase.database().ref('workingOns');
 var blockerRef = firebase.database().ref('blockers');
@@ -47,14 +33,12 @@ var blockerRef = firebase.database().ref('blockers');
 $(".add-have-done").click(function() {
     submitForm();
     clearForm();
-
 });
 
 //Function called from the Add Working On Button
 $(".add-working-on").click(function() {
     submitWorkingOnForm();
     clearWorkingOnForm();
-
 });
 
 //Function called from the Add Blocker Button
@@ -185,7 +169,6 @@ blockerRef.on('value', function(snapshot) {
 function reset() {
     $('#have-done ul').empty();
 }
-
 
 //FORM Functions
 
