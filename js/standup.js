@@ -16,12 +16,12 @@ $(document).ready(function(){
 
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyAAphwSKzGcBruqxXWtUMvNoty-meh0LRc",
+    apiKey: "",
     authDomain: "standup-6e708.firebaseapp.com",
     databaseURL: "https://standup-6e708.firebaseio.com",
     projectId: "standup-6e708",
     storageBucket: "",
-    messagingSenderId: "73308421513"
+    messagingSenderId: ""
 };
 firebase.initializeApp(config);
 
